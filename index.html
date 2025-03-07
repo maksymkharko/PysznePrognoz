@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Zarobków</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Zarobków</h1>
+        
+        <div class="slider-container">
+            <label for="earnings">Ile chcesz zarobić (zł):</label>
+            <div class="slider-value" id="sliderValue">5000</div>
+            <input type="range" id="earnings" min="0" max="20000" value="5000" step="100">
+        </div>
+
+        <div class="results">
+            <h2>Wyniki:</h2>
+            <div class="result-item">
+                <span>Potrzebne godziny pracy:</span>
+                <span id="hoursNeeded">120.48</span>
+            </div>
+            <div class="result-item">
+                <span>Brutto:</span>
+                <span id="brutto">5000 zł</span>
+            </div>
+            <div class="result-item">
+                <span>Netto:</span>
+                <span id="netto">3850 zł</span>
+            </div>
+        </div>
+
+        <div class="description">
+            <p>Aby osiągnąć ten wynik, musisz wykonywać średnio 2 zamówienia na godzinę.</p>
+            <p>Brutto: 30.50 zł/h + 5.50 zł za każde zamówienie.</p>
+            <p>Netto: Brutto minus 23% podatku.</p>
+            <p>Za wykonanie 400 zamówień otrzymasz dodatkowy bonus w wysokości około 1200 zł.</p>
+        </div>
+
+        <footer>
+            <a href="https://t.me/clownades" target="_blank">Автор проекта: t.me/clownades</a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
