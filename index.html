@@ -8,41 +8,46 @@
 </head>
 <body>
     <div class="container">
-        <h1>Kalkulator Zarobków</h1>
-        
+        <h1 id="title">Kalkulator Zarobków</h1>
+
+        <!-- Ползунок для желаемой суммы -->
         <div class="slider-container">
-            <label for="earnings">Ile chcesz zarobić (zł):</label>
-            <div class="slider-value" id="sliderValue">5000</div>
-            <input type="range" id="earnings" min="0" max="20000" value="5000" step="100">
+            <label for="desiredAmount">Ile chcesz zarobić (zł):</label>
+            <input type="range" id="desiredAmount" min="0" max="20000" value="5000" class="slider">
+            <span id="desiredAmountValue">5000</span>
         </div>
 
+        <!-- Результаты -->
         <div class="results">
-            <h2>Wyniki:</h2>
+            <h2 id="resultsTitle">Wyniki:</h2>
             <div class="result-item">
-                <span>Potrzebne godziny pracy:</span>
-                <span id="hoursNeeded">120.48</span>
+                <p>Potrzebne godziny pracy:</p>
+                <span id="requiredHours">0</span>
             </div>
             <div class="result-item">
-                <span>Brutto:</span>
-                <span id="brutto">5000 zł</span>
+                <p>Brutto:</p>
+                <span id="brutto">0</span> zł
             </div>
             <div class="result-item">
-                <span>Netto:</span>
-                <span id="netto">3850 zł</span>
+                <p>Netto:</p>
+                <span id="netto">0</span> zł
             </div>
         </div>
 
+        <!-- Описание -->
         <div class="description">
-            <p>Aby osiągnąć ten wynik, musisz wykonywać średnio 2 zamówienia na godzinę.</p>
-            <p>Brutto: 30.50 zł/h + 5.50 zł za każde zamówienie.</p>
-            <p>Netto: Brutto minus 23% podatku.</p>
-            <p>Za wykonanie 400 zamówień otrzymasz dodatkowy bonus w wysokości około 1200 zł.</p>
+            <p>Aby osiągnąć ten wynik, musisz wykonywać średnio <strong>2 zamówienia na godzinę</strong>.</p>
+            <p><strong>Brutto:</strong> 30.50 zł/h + 5.50 zł za każde zamówienie.</p>
+            <p><strong>Netto:</strong> Brutto minus 23% podatku.</p>
+            <p>Za wykonanie <strong>400 zamówień</strong> otrzymasz dodatkowy bonus w wysokości około <strong>1200 zł</strong>.</p>
         </div>
 
-        <footer>
-            <a href="https://t.me/clownades" target="_blank">Автор проекта: t.me/clownades</a>
-        </footer>
+        <!-- Информация об авторе -->
+        <div class="author">
+            <p>Автор проекта: <a href="https://t.me/clownades" target="_blank">t.me/clownades</a></p>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
