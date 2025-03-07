@@ -11,6 +11,7 @@ const TOTAL_HOURLY_RATE = HOURLY_RATE + (ORDER_BONUS * ORDERS_PER_HOUR);
 const slider = document.getElementById('earnings');
 const sliderValue = document.getElementById('sliderValue');
 const hoursNeeded = document.getElementById('hoursNeeded');
+const ordersNeeded = document.getElementById('ordersNeeded');
 const bruttoValue = document.getElementById('brutto');
 const nettoValue = document.getElementById('netto');
 
@@ -30,6 +31,9 @@ function updateCalculations() {
     // Calculate hours needed
     const hours = desiredEarnings / TOTAL_HOURLY_RATE;
     
+    // Calculate orders needed (2 orders per hour)
+    const orders = Math.ceil(hours * ORDERS_PER_HOUR);
+    
     // Calculate Brutto and Netto
     const brutto = desiredEarnings;
     const netto = brutto * (1 - TAX_RATE);
@@ -37,6 +41,7 @@ function updateCalculations() {
     // Update display values with animations
     sliderValue.textContent = formatNumber(desiredEarnings);
     hoursNeeded.textContent = formatNumber(hours);
+    ordersNeeded.textContent = orders;
     bruttoValue.textContent = `${formatNumber(brutto)} zł`;
     nettoValue.textContent = `${formatNumber(netto)} zł`;
 }
